@@ -78,9 +78,9 @@
 }
 
 .h2 {
-  @apply text-2xl font-semibold md:text-[32px];
+  @apply text-2xl font-semibold leading-snug md:text-[32px];
 }
 
 .h3 {
-  @apply text-xl font-semibold md:text-[28px];
+  @apply text-xl font-semibold leading-snug md:text-[28px];
 }

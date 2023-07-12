@@ -9,6 +9,7 @@ import imgAssetsA from "../public/reksa-dana.svg";
 import imgAssetsB from "../public/calculator.png";
 import imgAssetsC from "../public/auto-lending.svg";
 import imgAssetsD from "../public/download-app.png";
+import BenefitCard from "@/components/benefit-card";
 
 export default function Home() {
   return (
@@ -40,6 +41,12 @@ export default function Home() {
             <h2 className="h2 text-[#5c5c5c]">
               Kelebihan Memberikan Pinjaman di Akseleran
             </h2>
+
+            {/* Cards */}
+            <div className="grid gap-12 sm:grid-cols-2">
+              {/* Card */}
+              <BenefitCard />
+            </div>
           </div>
         </div>
       </section>
