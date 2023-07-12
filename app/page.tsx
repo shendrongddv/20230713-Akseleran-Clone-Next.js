@@ -1,113 +1,232 @@
-import Image from 'next/image'
+import Image from "next/image";
+import Link from "next/link";
+
+import { Button } from "@/components/ui/button";
+
+import GooglePlay from "../public/google-play.png";
+import AppStore from "../public/app-store.png";
+import imgAssetsA from "../public/reksa-dana.svg";
+import imgAssetsB from "../public/calculator.png";
+import imgAssetsC from "../public/auto-lending.svg";
+import imgAssetsD from "../public/download-app.png";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      {/* Ongoing Campaign */}
+      <section id="ongoing-campaign" className="px-6 pb-16 pt-36">
+        <div className="container">
+          <div className="flex flex-col gap-12">
+            <h2 className="h2 text-[#5c5c5c]">
+              Kampanye Pinjaman yang Sedang Berlangsung
+            </h2>
+
+            {/* # */}
+            <Button
+              variant="destructive"
+              className="w-full md:mx-auto md:w-max"
+            >
+              Lihat lebih banyak
+            </Button>
+          </div>
         </div>
-      </div>
+      </section>
+      {/* ./ Ongoing Campaign */}
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      {/* Benefit */}
+      <section id="ongoing-campaign" className="px-6 py-16">
+        <div className="container">
+          <div className="flex flex-col gap-12">
+            <h2 className="h2 text-[#5c5c5c]">
+              Kelebihan Memberikan Pinjaman di Akseleran
+            </h2>
+          </div>
+        </div>
+      </section>
+      {/* ./ Benefit */}
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
+      {/* Reksadana */}
+      <section id="reksadana" className="bg-[#399ed7] px-6 py-16">
+        <div className="container">
+          <div className="flex flex-col gap-12 md:flex-row md:items-center md:justify-between">
+            {/* Col Left */}
+            <div className="w-full md:w-5/12">
+              <Image
+                src={imgAssetsA}
+                alt="Reksa Dana"
+                className="h-auto w-full"
+              />
+            </div>
+
+            {/* Col Right */}
+            <div className="w-full md:w-6/12">
+              <h2 className="h2 text-white">Reksa Dana</h2>
+              <h3 className="h3 mt-4 text-white">
+                Bebas Nganggur. Aktif Berkembang.
+              </h3>
+              <p className="mt-6 text-white">
+                Tetap aktif kembangkan dana saat menanti peluang pendanaan
+                Akseleran. Dengan membuka akun reksa dana hasil kerjasama
+                Akseleran dengan Tanamduit, danamu jadi bebas nganggur dan dapat
+                manfaat maksimal.
+              </p>
+              <Button variant="destructive" className="mt-8 w-full md:w-max">
+                Buat Akun Reksa Dana
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* ./ Reksadana */}
+
+      {/* Calculator */}
+      <section id="calculator" className="bg-[#f1fbfe] px-6 py-16">
+        <div className="container">
+          <div className="flex flex-col gap-12 md:flex-row-reverse md:items-center md:justify-between">
+            {/* Col Left */}
+            <div className="w-full md:w-5/12">
+              <Image
+                src={imgAssetsB}
+                alt="Calculator"
+                className="h-auto w-full"
+              />
+            </div>
+
+            {/* Col Right */}
+            <div className="w-full md:w-6/12">
+              <h2 className="h2 text-[#5c5c5c]">Kalkulator Finansial</h2>
+              <h3 className="h3 mt-4 text-[#5c5c5c]">
+                Rencanakan Masa Depanmu Hari Ini!
+              </h3>
+              <p className="mt-6">
+                Hitung rencana pendanaanmu untuk mendapatkan kondisi keuangan
+                yang lebih terencana di masa depan.
+              </p>
+              <Button variant="destructive" className="mt-8 w-full md:w-max">
+                Rencanakan Sekarang
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* ./ Calculator */}
+
+      {/* Auto Lending */}
+      <section id="auto-lending" className="bg-[#399ed7] px-6 py-16">
+        <div className="container">
+          <div className="flex flex-col gap-12 md:flex-row md:items-center md:justify-between">
+            {/* Col Left */}
+            <div className="w-full md:w-5/12">
+              <Image
+                src={imgAssetsC}
+                alt="Auto Lending"
+                className="h-auto w-full"
+              />
+            </div>
+
+            {/* Col Right */}
+            <div className="w-full md:w-6/12">
+              <h2 className="h2 text-white">Auto Lending</h2>
+              <h3 className="h3 mt-4 text-white">Hemat Waktu. Hasil Optimal</h3>
+              <p className="mt-6 text-white">
+                Auto Lending merupakan fitur untuk memberikan pinjaman secara
+                otomatis yang bertujuan untuk memudahkan lender tanpa harus
+                menghabiskan waktu dalam mencari peluang pemberian pinjaman yang
+                sesuai dengan preferensi.
+              </p>
+              <Button variant="destructive" className="mt-8 w-full md:w-max">
+                Setup Auto Lending
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* ./ Auto Lending */}
+
+      {/* Download App */}
+      <section id="download-app" className="bg-[#f1fbfe] px-6 pt-16">
+        <div className="container">
+          <div className="flex flex-col-reverse gap-12 md:flex-row-reverse md:items-center md:justify-between">
+            {/* Col Left */}
+            <div className="w-full md:w-5/12">
+              <Image
+                src={imgAssetsD}
+                alt="Download App"
+                className="h-auto w-full max-sm:pt-4"
+              />
+            </div>
+
+            {/* Col Right */}
+            <div className="w-full md:w-6/12">
+              <h3 className="text-xl font-semibold text-[#5c5c5c] md:text-2xl">
+                Lebih praktis dengan Aplikasi Akseleran
+              </h3>
+              <p className="mt-6">
+                Kini mengajukan pinjaman bisa menggunakan aplikasi mobile
+                Akseleran. Lebih mudah, kapan saja, di mana saja.
+              </p>
+              <div className="mt-8 flex items-center gap-4">
+                <Link href="/">
+                  <Image
+                    src={GooglePlay}
+                    alt="Google Play"
+                    className="w-auto flex-1 sm:h-12 sm:flex-none"
+                  />
+                </Link>
+
+                <Link href="/">
+                  <Image
+                    src={AppStore}
+                    alt="Google Play"
+                    className="w-auto flex-1 sm:h-12 sm:flex-none"
+                  />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* ./ Download App */}
+
+      {/* Stats */}
+      <section id="stats" className="bg-[#399ed7] px-6 py-16">
+        <div className="container">
+          <h2 className="h2 text-white">Akseleran dalam Angka</h2>
+          <p className="mt-6 text-white">
+            Ikuti perjalanan Akseleran dalam mengakselerasikan kemajuan UKM di
+            Indonesia dan pengembangan dana masyarakat yang mendukungnya.
           </p>
-        </a>
+        </div>
+      </section>
+      {/* ./ Stats */}
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+      {/* Reviews */}
+      <section id="reviews" className="px-6 py-16">
+        <div className="container">
+          <div className="flex flex-col items-center"></div>
+        </div>
+      </section>
+      {/* ./ Reviews */}
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
+      {/* Covered */}
+      <section id="reviews" className="bg-[#f7f7f7] px-6 py-16">
+        <div className="container">
+          <div className="flex flex-col items-center">
+            <span className="text-lg">Diliput oleh:</span>
+          </div>
+        </div>
+      </section>
+      {/* ./ Covered */}
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+      {/* Partners */}
+      <section id="partners" className="px-6 py-16">
+        <div className="container">
+          <div className="flex flex-col items-center">
+            <span className="text-lg">Partner Kami :</span>
+          </div>
+        </div>
+      </section>
+      {/* ./ Partners */}
+    </>
+  );
 }

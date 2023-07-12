@@ -22,7 +22,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${fontBody.className} h-full antialiased`}>
+      <body
+        className={`${fontBody.className} h-full text-[#4a4a4a] antialiased`}
+      >
         <Navbar />
         <main>{children}</main>
         <Footer />
