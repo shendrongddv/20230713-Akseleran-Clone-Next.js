@@ -14,6 +14,8 @@ import BenefitCard from "@/components/benefit-card";
 import ReviewSlider from "@/components/review-slider";
 import { MediaCardDesktop } from "@/components/media-card";
 import MediaSlider from "@/components/media-slider";
+import { PartnerCardDesktop } from "@/components/partner-card.tsx";
+import PartnerSlider from "@/components/partner-slider";
 
 export default function Home() {
   return (
@@ -243,10 +245,21 @@ export default function Home() {
       {/* ./ Covered */}
 
       {/* Partners */}
-      <section id="partners" className="px-6 py-16">
+      <section id="partners" className="px-6 md:py-16">
         <div className="container">
-          <div className="flex flex-col items-center">
-            <span className="text-lg">Partner Kami :</span>
+          <div className="flex flex-col items-center gap-8">
+            <span className="hidden text-lg md:flex">Partner Kami :</span>
+
+            {/* Partner Desktop */}
+            <div className="hidden flex-wrap items-center justify-center gap-y-6 md:flex">
+              {/* Card */}
+              <PartnerCardDesktop />
+            </div>
+
+            {/* Partner Mobile */}
+            <div className="flex w-full md:hidden">
+              <PartnerSlider />
+            </div>
           </div>
         </div>
       </section>

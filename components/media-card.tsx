@@ -14,6 +14,7 @@ interface MediaCardMobileProps {
   href: string;
 }
 
+// Dummy Data
 const media = [
   {
     id: 1,
@@ -149,7 +150,7 @@ const media = [
   },
 ];
 
-// Desktop
+// Media Card Desktop
 export const MediaCardDesktop = () => {
   const items = media;
 
@@ -182,7 +183,7 @@ export const MediaCardDesktop = () => {
   );
 };
 
-// Mobile
+// Media Card Mobile
 export const MediaCardMobile: React.FC<MediaCardMobileProps> = ({
   id,
   name,

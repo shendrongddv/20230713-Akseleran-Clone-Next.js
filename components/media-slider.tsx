@@ -147,6 +147,7 @@ const media = [
   },
 ];
 
+// Media Slider
 const MediaSlider = () => {
   const items = media;
 
