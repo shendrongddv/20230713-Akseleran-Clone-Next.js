@@ -10,7 +10,6 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
-import NavbarBrand from "./navbar-brand";
 import { NavbarButtonGroupsMobile, NavbarLinksMobile } from "./navbar-links";
 
 const NavbarMobile = () => {
@@ -21,7 +20,7 @@ const NavbarMobile = () => {
           <Menu />
         </Button>
       </SheetTrigger>
-      <SheetContent side="top" className="w-full px-6 pb-6 pt-10">
+      <SheetContent side="top" className="w-full px-6 pb-6 pt-16">
         <SheetHeader>
           <SheetTitle></SheetTitle>
           <SheetDescription></SheetDescription>

@@ -59,7 +59,7 @@ export const NavbarLinksMobile = () => {
             buttonVariants({
               variant: "ghost",
               class:
-                "w-full -translate-x-4 justify-start font-semibold transition duration-200 ease-linear hover:translate-x-0",
+                "w-full -translate-x-4 justify-start text-xl font-semibold transition duration-200 ease-linear hover:translate-x-0",
             })
           )}
         >
@@ -107,7 +107,7 @@ export const NavbarButtonGroupsMobile = () => {
         className={cn(
           buttonVariants({
             variant: "default",
-            class: "w-full font-semibold",
+            class: "w-full text-xl font-semibold",
           })
         )}
       >
@@ -118,7 +118,7 @@ export const NavbarButtonGroupsMobile = () => {
         className={cn(
           buttonVariants({
             variant: "outline",
-            class: "w-full font-semibold",
+            class: "w-full text-xl font-semibold",
           })
         )}
       >
