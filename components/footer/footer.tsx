@@ -336,28 +336,29 @@ const Footer = () => {
 
             <p>
               (i) Pengguna Layanan Pinjaman Meminjam Uang Berbasis Teknologi
-              Informasi ("Fintech Lending") merupakan wujud kesepakatan dan
-              hubungan perdata antara Pemberi Pinjaman dengan Penerima Pinjaman,
-              sehingga segala resiko dan akibat hukum daripadanya ditanggung
-              sepenuhnya oleh masing-masing pihak yang berkontrak. (ii) Resiko
-              Kredit atau Gagal Bayar dan seluruh kerugian dari atau terkait
-              dengan kesepakatan pinjam meminjam ditanggung sepenuhnya oleh
-              Pemberi Pinjaman. Tidak ada lembaga atau otoritas negara yang
-              bertanggung jawab atas resiko gagal bayar dan kerugian tersebut.
-              (iii) Pemberi Pinjaman yang belum memiliki pengetahuan dan
-              pengalaman Pinjam-meminjam atau Fintech Lending, disarankan tidak
-              menggunakan layanan ini. (iv) Sebelum memanfaatkan Fintech
-              Lending, Penerima Pinjaman wajib mempertimbangkan tingkat bunga
-              pinjaman dan biaya-biaya lainnya sesuai dengan kemampuannya dalam
-              melunasi pinjaman. (v) Setiap kecurangan tercatat secara digital
-              di dunia maya dan dapat diketahui masyarakat luas di media sosial
-              serta dapat menjadi alat bukti hukum yang sah menurut peraturan
-              mengenai informasi dan transaksi elektronik dalam proses
-              penyelesaian sengketa dan penegakan hukum. (vi) Masyarakat
-              Pengguna wajib membaca dan memahami informasi ini sebelum
-              keputusan sebagai Pemberi Pinjaman maupun Penerima Pinjaman.
-              Keputusan Pengguna untuk memanfaatkan Fintech Lending merupakan
-              suatu wujud dan bukti pemahaman atas informasi ini.
+              Informasi (&quot;Fintech Lending&quot;) merupakan wujud
+              kesepakatan dan hubungan perdata antara Pemberi Pinjaman dengan
+              Penerima Pinjaman, sehingga segala resiko dan akibat hukum
+              daripadanya ditanggung sepenuhnya oleh masing-masing pihak yang
+              berkontrak. (ii) Resiko Kredit atau Gagal Bayar dan seluruh
+              kerugian dari atau terkait dengan kesepakatan pinjam meminjam
+              ditanggung sepenuhnya oleh Pemberi Pinjaman. Tidak ada lembaga
+              atau otoritas negara yang bertanggung jawab atas resiko gagal
+              bayar dan kerugian tersebut. (iii) Pemberi Pinjaman yang belum
+              memiliki pengetahuan dan pengalaman Pinjam-meminjam atau Fintech
+              Lending, disarankan tidak menggunakan layanan ini. (iv) Sebelum
+              memanfaatkan Fintech Lending, Penerima Pinjaman wajib
+              mempertimbangkan tingkat bunga pinjaman dan biaya-biaya lainnya
+              sesuai dengan kemampuannya dalam melunasi pinjaman. (v) Setiap
+              kecurangan tercatat secara digital di dunia maya dan dapat
+              diketahui masyarakat luas di media sosial serta dapat menjadi alat
+              bukti hukum yang sah menurut peraturan mengenai informasi dan
+              transaksi elektronik dalam proses penyelesaian sengketa dan
+              penegakan hukum. (vi) Masyarakat Pengguna wajib membaca dan
+              memahami informasi ini sebelum keputusan sebagai Pemberi Pinjaman
+              maupun Penerima Pinjaman. Keputusan Pengguna untuk memanfaatkan
+              Fintech Lending merupakan suatu wujud dan bukti pemahaman atas
+              informasi ini.
             </p>
           </div>
         </div>
