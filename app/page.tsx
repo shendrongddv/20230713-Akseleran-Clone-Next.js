@@ -18,6 +18,7 @@ import { MediaCardDesktop } from "@/components/media-card";
 import MediaSlider from "@/components/media-slider";
 import { PartnerCardDesktop } from "@/components/partner-card.tsx";
 import PartnerSlider from "@/components/partner-slider";
+import Stats from "@/components/stats";
 
 export default function Home() {
   return (
@@ -211,6 +212,9 @@ export default function Home() {
             Ikuti perjalanan Akseleran dalam mengakselerasikan kemajuan UKM di
             Indonesia dan pengembangan dana masyarakat yang mendukungnya.
           </p>
+
+          {/* Stats Wrapper */}
+          <Stats />
         </div>
       </section>
       {/* ./ Stats */}
