@@ -22,7 +22,7 @@ const media = [
   {
     id: 2,
     name: "Daily Social",
-    img: "daily-social.png",
+    img: "daily-social.svg",
     href: "/",
   },
   {
@@ -94,7 +94,7 @@ const media = [
   {
     id: 14,
     name: "Bisnis Indonesia",
-    img: "bisnis-indonesia.png",
+    img: "bisnis-indonesia.svg",
     href: "/",
   },
   {
@@ -147,7 +147,7 @@ const media = [
   },
 ];
 
-// Media Slider
+// Media Slider *
 const MediaSlider = () => {
   const items = media;
 

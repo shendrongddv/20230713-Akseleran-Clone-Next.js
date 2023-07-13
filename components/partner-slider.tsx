@@ -22,31 +22,31 @@ const partner = [
   {
     id: 21,
     name: "Pefindo",
-    img: "pefindo.jpg",
+    img: "pefindo.svg",
     href: "/",
   },
   {
     id: 3,
     name: "Tokopedia",
-    img: "tokopedia.png",
+    img: "tokopedia.svg",
     href: "/",
   },
   {
     id: 4,
     name: "Bukalapak",
-    img: "bukalapak.png",
+    img: "bukalapak.svg",
     href: "/",
   },
   {
     id: 5,
     name: "Qasir",
-    img: "qasir.png",
+    img: "qasir.svg",
     href: "/",
   },
   {
     id: 6,
     name: "Hipmi",
-    img: "hipmi.jpeg",
+    img: "hipmi.png",
     href: "/",
   },
   {
@@ -64,7 +64,7 @@ const partner = [
   {
     id: 9,
     name: "Bhinneka",
-    img: "bhinneka.png",
+    img: "bhinneka.svg",
     href: "/",
   },
   {
@@ -74,7 +74,6 @@ const partner = [
     href: "/",
   },
 ];
-
 // Partner Slider
 const PartnerSlider = () => {
   const items = partner;

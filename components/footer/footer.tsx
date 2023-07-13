@@ -68,6 +68,21 @@ const footerLinks = [
         label: "Kalkulator Finansial",
         href: "/",
       },
+      {
+        id: 5,
+        label: "Blog",
+        href: "/",
+      },
+      {
+        id: 6,
+        label: "FAQ",
+        href: "/",
+      },
+      {
+        id: 7,
+        label: "Hubungi Kami",
+        href: "/",
+      },
     ],
   },
   {
@@ -158,27 +173,6 @@ const footerLinks = [
       {
         id: 8,
         label: "Draf Standar Perjanjian Jual Beli dan Pengalihan Piutang",
-        href: "/",
-      },
-    ],
-  },
-  {
-    id: 2,
-    label: "Dukungan",
-    links: [
-      {
-        id: 1,
-        label: "Blog",
-        href: "/",
-      },
-      {
-        id: 2,
-        label: "FAQ",
-        href: "/",
-      },
-      {
-        id: 3,
-        label: "Hubungi Kami",
         href: "/",
       },
     ],
@@ -278,7 +272,7 @@ const Footer = () => {
                 {footerLinks?.map((item) => (
                   <div key={item.id}>
                     <h4 className="font-semibold text-white">{item.label}</h4>
-                    <ul className="mt-4 space-y-2">
+                    <ul className="mt-4 space-y-3">
                       {item.links?.map((subitem) => (
                         <li key={subitem.id}>
                           <Link
