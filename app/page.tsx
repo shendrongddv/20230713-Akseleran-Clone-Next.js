@@ -226,13 +226,13 @@ export default function Home() {
       {/* ./ Reviews */}
 
       {/* Covered */}
-      <section id="reviews" className="bg-[#f7f7f7] px-6 md:py-16">
+      <section id="reviews" className="w-full bg-[#f7f7f7] px-6 py-10 md:py-16">
         <div className="container">
           <div className="flex flex-col items-center gap-8">
-            <span className="hidden text-lg md:flex">Diliput oleh:</span>
+            <span className="flex text-lg">Diliput oleh:</span>
 
             {/* Cards Desktop */}
-            <div className="hidden flex-wrap items-center justify-center gap-y-6 md:flex">
+            <div className="hidden flex-wrap items-center justify-center md:flex">
               {/* Card */}
               <MediaCardDesktop />
             </div>
@@ -247,13 +247,13 @@ export default function Home() {
       {/* ./ Covered */}
 
       {/* Partners */}
-      <section id="partners" className="px-6 md:py-16">
+      <section id="partners" className="px-6 pb-8 pt-16">
         <div className="container">
           <div className="flex flex-col items-center gap-8">
-            <span className="hidden text-lg md:flex">Partner Kami :</span>
+            <span className="flex text-lg">Partner Kami :</span>
 
             {/* Partner Desktop */}
-            <div className="hidden flex-wrap items-center justify-center gap-y-6 md:flex">
+            <div className="hidden flex-wrap items-center justify-center md:flex">
               {/* Card */}
               <PartnerCardDesktop />
             </div>

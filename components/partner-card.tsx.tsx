@@ -87,7 +87,7 @@ export const PartnerCardDesktop = () => {
       {items?.map((item) => (
         <div
           key={item.id}
-          className="flex w-1/3 items-center justify-center md:w-1/5 md:px-10"
+          className="flex items-center justify-center px-8 py-6 md:w-1/5"
         >
           <TooltipProvider>
             <Tooltip>
@@ -97,7 +97,7 @@ export const PartnerCardDesktop = () => {
                   alt={item.name}
                   width={200}
                   height={200}
-                  className="h-auto w-auto mix-blend-multiply"
+                  className="max-h-12 w-auto opacity-75 mix-blend-multiply grayscale transition duration-500 ease-linear hover:opacity-100 hover:grayscale-0"
                 />
               </TooltipTrigger>
               <TooltipContent>
@@ -121,13 +121,13 @@ export const PartnerCardMobile: React.FC<PartnerCardMobileProps> = ({
   const items = partner;
 
   return (
-    <div className="flex h-full items-center justify-center">
+    <div className="flex h-full w-full items-center justify-center">
       <Image
         src={`/partner/${img}`}
         alt={name}
         width={200}
         height={200}
-        className="h-auto w-auto mix-blend-multiply"
+        className="h-11 max-h-20 w-auto opacity-75 mix-blend-multiply  grayscale transition duration-500 ease-linear hover:opacity-100 hover:grayscale-0"
       />
     </div>
   );

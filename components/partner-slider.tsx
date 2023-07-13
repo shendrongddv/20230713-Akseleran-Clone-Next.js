@@ -109,7 +109,7 @@ const PartnerSlider = () => {
       className="h-full"
     >
       {items?.map((item) => (
-        <SwiperSlide key={item.id} className="h-full bg-white">
+        <SwiperSlide key={item.id} className="h-full w-full bg-white">
           <PartnerCardMobile
             id={item.id}
             name={item.name}

@@ -182,7 +182,7 @@ const MediaSlider = () => {
       className="h-full"
     >
       {items?.map((item) => (
-        <SwiperSlide key={item.id} className="h-full bg-[#f7f7f7]">
+        <SwiperSlide key={item.id} className="h-full w-full bg-[#f7f7f7]">
           <MediaCardMobile
             id={item.id}
             name={item.name}
