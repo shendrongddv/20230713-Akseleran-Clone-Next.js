@@ -11,6 +11,10 @@ import imgAssetsC from "../public/auto-lending.svg";
 import imgAssetsD from "../public/download-app.png";
 import BenefitCard from "@/components/benefit-card";
 
+import ReviewSlider from "@/components/review-slider";
+import { MediaCardDesktop } from "@/components/media-card";
+import MediaSlider from "@/components/media-slider";
+
 export default function Home() {
   return (
     <>
@@ -18,7 +22,7 @@ export default function Home() {
       <section id="ongoing-campaign" className="px-6 pb-16 pt-36">
         <div className="container">
           <div className="flex flex-col gap-12">
-            <h2 className="h2 text-[#5c5c5c]">
+            <h2 className="h2 text-primary">
               Kampanye Pinjaman yang Sedang Berlangsung
             </h2>
 
@@ -38,7 +42,7 @@ export default function Home() {
       <section id="ongoing-campaign" className="px-6 py-16">
         <div className="container">
           <div className="flex flex-col gap-12">
-            <h2 className="h2 text-[#5c5c5c]">
+            <h2 className="h2 text-primary">
               Kelebihan Memberikan Pinjaman di Akseleran
             </h2>
 
@@ -67,10 +71,10 @@ export default function Home() {
 
             {/* Col Right */}
             <div className="w-full md:w-6/12">
-              <h2 className="h2 text-white">Reksa Dana</h2>
-              <h3 className="h3 mt-4 text-white">
+              <h3 className="h3 text-white">Reksa Dana</h3>
+              <h2 className="h2 mt-4 text-white">
                 Bebas Nganggur. Aktif Berkembang.
-              </h3>
+              </h2>
               <p className="mt-6 text-white">
                 Tetap aktif kembangkan dana saat menanti peluang pendanaan
                 Akseleran. Dengan membuka akun reksa dana hasil kerjasama
@@ -101,10 +105,10 @@ export default function Home() {
 
             {/* Col Right */}
             <div className="w-full md:w-6/12">
-              <h2 className="h2 text-[#5c5c5c]">Kalkulator Finansial</h2>
-              <h3 className="h3 mt-4 text-[#5c5c5c]">
+              <h3 className="h3 text-primary/90">Kalkulator Finansial</h3>
+              <h2 className="h2 mt-4 text-primary">
                 Rencanakan Masa Depanmu Hari Ini!
-              </h3>
+              </h2>
               <p className="mt-6">
                 Hitung rencana pendanaanmu untuk mendapatkan kondisi keuangan
                 yang lebih terencana di masa depan.
@@ -133,8 +137,8 @@ export default function Home() {
 
             {/* Col Right */}
             <div className="w-full md:w-6/12">
-              <h2 className="h2 text-white">Auto Lending</h2>
-              <h3 className="h3 mt-4 text-white">Hemat Waktu. Hasil Optimal</h3>
+              <h3 className="h3 text-white">Auto Lending</h3>
+              <h2 className="h2 mt-4 text-white">Hemat Waktu. Hasil Optimal</h2>
               <p className="mt-6 text-white">
                 Auto Lending merupakan fitur untuk memberikan pinjaman secara
                 otomatis yang bertujuan untuk memudahkan lender tanpa harus
@@ -165,7 +169,7 @@ export default function Home() {
 
             {/* Col Right */}
             <div className="w-full md:w-6/12">
-              <h3 className="text-xl font-semibold text-[#5c5c5c] md:text-2xl">
+              <h3 className="text-xl font-semibold text-primary md:text-2xl">
                 Lebih praktis dengan Aplikasi Akseleran
               </h3>
               <p className="mt-6">
@@ -210,16 +214,29 @@ export default function Home() {
       {/* Reviews */}
       <section id="reviews" className="px-6 py-16">
         <div className="container">
-          <div className="flex flex-col items-center"></div>
+          <div className="w-full">
+            <ReviewSlider />
+          </div>
         </div>
       </section>
       {/* ./ Reviews */}
 
       {/* Covered */}
-      <section id="reviews" className="bg-[#f7f7f7] px-6 py-16">
+      <section id="reviews" className="bg-[#f7f7f7] px-6 md:py-16">
         <div className="container">
-          <div className="flex flex-col items-center">
-            <span className="text-lg">Diliput oleh:</span>
+          <div className="flex flex-col items-center gap-8">
+            <span className="hidden text-lg md:flex">Diliput oleh:</span>
+
+            {/* Cards Desktop */}
+            <div className="hidden flex-wrap items-center justify-center gap-y-6 md:flex">
+              {/* Card */}
+              <MediaCardDesktop />
+            </div>
+
+            {/* Cards Mobile */}
+            <div className="flex w-full md:hidden">
+              <MediaSlider />
+            </div>
           </div>
         </div>
       </section>
