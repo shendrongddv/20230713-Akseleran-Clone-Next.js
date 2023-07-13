@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 
 import GooglePlay from "../public/google-play.png";
 import AppStore from "../public/app-store.png";
+import logoOJK from "../public/ojk.png";
+import logoAFPI from "../public/afpi.png";
 import imgAssetsA from "../public/reksa-dana.svg";
 import imgAssetsB from "../public/calculator.png";
 import imgAssetsC from "../public/auto-lending.svg";
@@ -264,6 +266,41 @@ export default function Home() {
         </div>
       </section>
       {/* ./ Partners */}
+
+      {/* Legalitas */}
+      <section id="legalitas" className="px-6 py-16">
+        <div className="container">
+          <div className="flex flex-col gap-12 md:flex-row md:items-center md:justify-evenly">
+            <div className="flex w-full flex-col items-center text-center sm:w-4/12">
+              <span className="text-xs md:text-sm">
+                Telah Berizin dan Diawasi oleh
+              </span>
+              <Link href="/">
+                <Image
+                  src={logoOJK}
+                  alt="OJK"
+                  width={400}
+                  height={400}
+                  className="mt-6 h-16 w-auto sm:h-20"
+                />
+              </Link>
+            </div>
+            <div className="flex w-full flex-col items-center text-center sm:w-4/12">
+              <span className="text-xs md:text-sm">Anggota Terdaftar dari</span>
+              <Link href="/">
+                <Image
+                  src={logoAFPI}
+                  alt="OJK"
+                  width={400}
+                  height={400}
+                  className="mt-6 h-16 w-auto sm:h-20"
+                />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* ./ Legalitas */}
     </>
   );
 }
