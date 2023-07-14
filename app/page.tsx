@@ -43,10 +43,7 @@ export default function Home() {
             </div>
 
             {/* # */}
-            <Button
-              variant="destructive"
-              className="w-full md:mx-auto md:w-max"
-            >
+            <Button variant="outline" className="w-full md:mx-auto md:w-max">
               Lihat lebih banyak
             </Button>
           </div>

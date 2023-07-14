@@ -29,8 +29,9 @@ const ListingCard = () => {
 
         <div className="from absolute left-0 top-0 z-10 h-full w-full bg-gradient-to-b from-transparent from-50% via-50% to-gray-900/80 to-100%"></div>
 
-        <h4 className="absolute bottom-6 left-6 z-20 font-bold text-white">
-          Pinjaman 16828/EL/345078-1/VII/2023 Lorem, ipsum dolor
+        <h4 className="absolute bottom-6 left-6 right-6 z-20 line-clamp-2 font-bold text-white">
+          Pinjaman 16828/EL/345078-1/VII/2023 Lorem, ipsum dolor sit amet
+          consectetur adipisicing elit.
         </h4>
       </div>
       <div className="flex flex-col gap-4 p-6">
