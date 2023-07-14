@@ -19,17 +19,28 @@ import MediaSlider from "@/components/media-slider";
 import { PartnerCardDesktop } from "@/components/partner-card.tsx";
 import PartnerSlider from "@/components/partner-slider";
 import Stats from "@/components/stats";
+import ListingCard from "@/components/listing-card";
 
 export default function Home() {
+  const items = [1, 2, 3, 4, 5, 6];
+
   return (
     <>
       {/* Ongoing Campaign */}
       <section id="ongoing-campaign" className="px-6 pb-16 pt-36">
         <div className="container">
           <div className="flex flex-col gap-12">
+            {/* # */}
             <h2 className="h2 text-primary">
               Kampanye Pinjaman yang Sedang Berlangsung
             </h2>
+
+            {/* # Listings */}
+            <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+              {items.map((item) => (
+                <ListingCard key={item} />
+              ))}
+            </div>
 
             {/* # */}
             <Button
