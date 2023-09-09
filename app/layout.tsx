@@ -1,18 +1,16 @@
-import { Poppins } from "next/font/google";
 import "./globals.css";
+import type { Metadata } from "next";
+import { siteConfig } from "@/config/site";
+import { fontDisplay, fontBody } from "@/lib/fonts";
+import { cn } from "@/lib/utils";
+import { ThemeProvider } from "@/components/theme-provider";
 
 import Navbar from "@/components/header/navbar";
 import Footer from "@/components/footer/footer";
 
-const fontBody = Poppins({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-});
-
-export const metadata = {
-  title: "Akseleran | Fintech P2P Lending Indonesia",
-  description:
-    "Akseleran adalah platform crowdfunding P2P Lending Indonesia yang menghubungkan UKM yang membutuhkan pinjaman untuk mengembangkan usahanya.",
+export const metadata: Metadata = {
+  title: siteConfig.name,
+  description: siteConfig.description,
 };
 
 export default function RootLayout({
@@ -21,13 +19,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${fontBody.className} h-full text-[#4a4a4a] antialiased`}
+        className={cn(
+          "min-h-screen bg-background font-body text-[#4a4a4a] antialiased",
+          fontDisplay.variable,
+          fontBody.variable
+        )}
       >
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -1,3 +1,4 @@
+import { ThemeToggle } from "../theme-toggle";
 import NavbarMobile from "./mobile";
 import NavbarBrand from "./navbar-brand";
 import { NavbarButtonGroups, NavbarLinks } from "./navbar-links";
@@ -17,11 +18,13 @@ const Navbar = () => {
 
             {/* Button Group */}
             <NavbarButtonGroups />
+            <ThemeToggle />
           </div>
 
           {/* Navbar Links Mobile */}
           <div className="flex md:hidden">
             <NavbarMobile />
+            <ThemeToggle />
           </div>
         </div>
       </div>

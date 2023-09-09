@@ -1,4 +1,4 @@
-dist
-node_modules
 .next
 build
+dist
+node_modules
