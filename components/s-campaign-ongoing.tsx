@@ -4,7 +4,7 @@ import { buttonVariants } from "./ui/button";
 
 export const CampaignOngoingSection = () => {
   return (
-    <section className="px-4 pb-16 pt-28">
+    <section className="px-4 py-16">
       <div className="container flex flex-col gap-8">
         {/* # */}
         <h2 className="h2">Kampanye Pinjaman yang Sedang Berlangsung</h2>

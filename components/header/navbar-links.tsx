@@ -3,27 +3,33 @@ import React from "react";
 
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "../ui/button";
+import { SheetClose } from "../ui/sheet";
+import { Download, FileText, InfoIcon, LucideIcon, Upload } from "lucide-react";
 
 const navLinks = [
   {
     id: 1,
     label: "Beri Pinjaman",
-    href: "/",
+    href: "/beri-pinjaman",
+    icon: Upload,
   },
   {
     id: 2,
     label: "Ajukan Pinjaman",
-    href: "/",
+    href: "/ajukan-pinjaman",
+    icon: Download,
   },
   {
     id: 3,
     label: "Tentang Kami",
-    href: "/",
+    href: "/tentang-kami",
+    icon: InfoIcon,
   },
   {
     id: 4,
     label: "Blog",
-    href: "/",
+    href: "/blog",
+    icon: FileText,
   },
 ];
 
@@ -48,82 +54,84 @@ export const NavbarLinks = () => {
   );
 };
 
-export const NavbarLinksMobile = () => {
+export const MobileNavbarLinks = () => {
   return (
-    <nav className="flex flex-col items-start gap-2">
-      {navLinks?.map((item) => (
-        <Link
-          key={item.id}
-          href={item.href}
-          className={cn(
-            buttonVariants({
-              variant: "ghost",
-              class:
-                "w-full -translate-x-4 justify-start font-medium transition duration-200 ease-linear hover:translate-x-0",
-            })
-          )}
-        >
-          {item.label}
-        </Link>
-      ))}
+    <nav className="flex flex-col gap-4 p-4">
+      <ul className="grid grid-cols-2 gap-2">
+        {navLinks.slice(0, 2)?.map((item) => (
+          <li key={item.id}>
+            <SingleItemAlpha
+              label={item.label}
+              href={item.href}
+              icon={item.icon}
+            />
+          </li>
+        ))}
+      </ul>
+
+      <ul className="grid gap-0 border-t pt-2">
+        {navLinks.slice(2)?.map((item) => (
+          <li key={item.id}>
+            <SingleItemBeta
+              label={item.label}
+              href={item.href}
+              icon={item.icon}
+            />
+          </li>
+        ))}
+      </ul>
     </nav>
   );
 };
 
-export const NavbarButtonGroups = () => {
+type SingleItemProps = {
+  label: string;
+  href: string;
+  icon: LucideIcon;
+};
+
+const SingleItemAlpha = ({ label, href, icon: Icon }: SingleItemProps) => {
   return (
-    <div className="flex items-center justify-center gap-2">
+    <SheetClose asChild>
       <Link
-        href="/"
+        href={href}
+        aria-label={label}
         className={cn(
           buttonVariants({
-            variant: "default",
-            class: "px-8 py-1 text-xs font-semibold",
+            variant: "secondary",
+            size: "default",
+            className:
+              "flex h-full w-full flex-col items-center justify-center gap-2 bg-secondary-foreground px-2 py-3 text-center text-sm text-white hover:bg-primary-foreground hover:text-white",
           })
         )}
       >
-        Masuk
+        <div className="flex aspect-square items-center justify-center rounded-full border p-2 drop-shadow">
+          <Icon className=" h-6 w-6" />
+        </div>
+        {label}
       </Link>
-      <Link
-        href="/"
-        className={cn(
-          buttonVariants({
-            variant: "outline",
-            class: "px-8 py-1 text-xs font-semibold",
-          })
-        )}
-      >
-        Daftar
-      </Link>
-    </div>
+    </SheetClose>
   );
 };
 
-export const NavbarButtonGroupsMobile = () => {
+const SingleItemBeta = ({ label, href, icon: Icon }: SingleItemProps) => {
   return (
-    <div className="flex flex-col gap-2">
+    <SheetClose asChild>
       <Link
-        href="/"
+        href={href}
+        aria-label={label}
         className={cn(
           buttonVariants({
-            variant: "default",
-            class: "w-full font-medium",
+            variant: "link",
+            size: "default",
+            className:
+              "flex items-center justify-start gap-2 !px-0 !py-0 text-foreground",
           })
         )}
       >
-        Masuk
+        <Icon className=" h-4 w-4 text-primary-foreground" />
+        {label}
       </Link>
-      <Link
-        href="/"
-        className={cn(
-          buttonVariants({
-            variant: "outline",
-            class: "w-full font-medium",
-          })
-        )}
-      >
-        Daftar
-      </Link>
-    </div>
+    </SheetClose>
   );
 };

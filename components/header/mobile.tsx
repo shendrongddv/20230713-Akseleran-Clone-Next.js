@@ -1,16 +1,16 @@
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
-  // SheetClose,
+  SheetClose,
   SheetContent,
-  SheetDescription,
   SheetFooter,
   SheetHeader,
-  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
-import { NavbarButtonGroupsMobile, NavbarLinksMobile } from "./navbar-links";
+import { MobileNavbarButtons } from "./navbar-buttons";
+import { SiteLogoNavbar } from "../site-logo";
+import { MobileNavbarLinks } from "./navbar-links";
 
 const NavbarMobile = () => {
   return (
@@ -20,20 +20,25 @@ const NavbarMobile = () => {
           <Menu />
         </Button>
       </SheetTrigger>
-      <SheetContent side="top" className="w-full px-6 pb-6 pt-16">
-        <SheetHeader>
-          <SheetTitle></SheetTitle>
-          <SheetDescription></SheetDescription>
+      <SheetContent
+        side="left"
+        className="flex h-full w-4/5 flex-col gap-0 p-0"
+      >
+        <SheetHeader className="flex justify-start border-b p-4">
+          <SheetClose asChild>
+            <SiteLogoNavbar />
+          </SheetClose>
         </SheetHeader>
 
-        <div className="flex flex-col gap-16">
-          <NavbarLinksMobile />
-          <NavbarButtonGroupsMobile />
-        </div>
-        <SheetFooter>
-          {/* <SheetClose asChild>
-            <Button type="submit">Save changes</Button>
-          </SheetClose> */}
+        {/* SheetBody */}
+        <MobileNavbarLinks />
+        {/* ./ SheetBody */}
+
+        <SheetFooter className="mt-auto grid grid-cols-2 gap-2 border-t p-4">
+          <MobileNavbarButtons />
+          <span className="col-span-2 mt-2 text-[10px] text-muted-foreground">
+            © 2023 PT. Akseleran Keuangan Inklusif Indonesia
+          </span>
         </SheetFooter>
       </SheetContent>
     </Sheet>
