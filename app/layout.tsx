@@ -5,9 +5,6 @@ import { fontDisplay, fontBody } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
 
-import Navbar from "@/components/header/navbar";
-import Footer from "@/components/footer/footer";
-
 export const metadata: Metadata = {
   title: siteConfig.name,
   description: siteConfig.description,
@@ -28,9 +25,7 @@ export default function RootLayout({
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
+          {children}
         </ThemeProvider>
       </body>
     </html>

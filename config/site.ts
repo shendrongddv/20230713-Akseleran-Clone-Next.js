@@ -17,7 +17,30 @@ export const siteConfig = {
   },
 };
 
-export const siteSocialLinks = [
+export const siteMainNav = [
+  {
+    id: 1,
+    label: "Beri Pinjaman",
+    href: "/",
+  },
+  {
+    id: 2,
+    label: "Ajukan Pinjaman",
+    href: "/",
+  },
+  {
+    id: 3,
+    label: "Tentang Kami",
+    href: "/",
+  },
+  {
+    id: 4,
+    label: "Blog",
+    href: "/",
+  },
+];
+
+export const siteSocials = [
   {
     label: Github,
     icon: Github,
