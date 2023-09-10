@@ -97,7 +97,7 @@ interface StatCardProps {
     | "moneybag-down"
     | "holding-money"
     | "giving-money";
-  children: ReactNode;
+  children: React.ReactNode;
   className?: string;
 }
 const StatCard: React.FC<StatCardProps> = ({ children, icon, className }) => {
