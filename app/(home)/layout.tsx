@@ -1,6 +1,5 @@
 import Navbar from "@/components/header/navbar";
 import Footer from "@/components/footer/footer";
-import { DownloadApp } from "@/components/cta/download-app";
 import { Header } from "@/components/header/header";
 
 interface HomepageLayoutProps {
@@ -14,10 +13,7 @@ export default async function HomepageLayout({
     <>
       {/* <Navbar /> */}
       <Header />
-      <main>
-        {children}
-        <DownloadApp />
-      </main>
+      <main>{children}</main>
       <Footer />
     </>
   );

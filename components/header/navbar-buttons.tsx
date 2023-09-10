@@ -11,7 +11,7 @@ export const NavbarButtons = () => {
         aria-label="Masuk"
         className={cn(
           buttonVariants({
-            variant: "default",
+            variant: "primary",
             size: "default",
             className: "",
           })

@@ -9,7 +9,7 @@ import { NavbarButtons } from "./navbar-buttons";
 
 export const Header = () => {
   return (
-    <header className="border-b px-4">
+    <header className="fixed left-0 top-0 z-50 w-full border-b bg-white px-4">
       <div className="container">
         <div className="flex h-14 items-center justify-between md:h-16">
           {/* Logo */}
@@ -18,8 +18,10 @@ export const Header = () => {
 
             {/* Akseleran */}
             <Link
-              href="/"
+              href="https://www.akselerangroup.com/"
               aria-label="Akseleran Group"
+              target="_blank"
+              rel="noopener noreferrer"
               className={cn(
                 buttonVariants({
                   variant: "secondary",

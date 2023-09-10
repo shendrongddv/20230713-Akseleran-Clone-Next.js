@@ -1,9 +1,8 @@
 import Image from "next/image";
-import { ReactNode } from "react";
 
-const Stats = () => {
+export const LoanStatisticCard = () => {
   return (
-    <div className="mt-16 w-full">
+    <div className="w-full">
       {/* Grid */}
       <div className="grid gap-4 md:grid-cols-2">
         <div className="grid gap-4 sm:grid-cols-2">
@@ -86,8 +85,6 @@ const Stats = () => {
     </div>
   );
 };
-
-export default Stats;
 
 // Stat Card
 interface StatCardProps {

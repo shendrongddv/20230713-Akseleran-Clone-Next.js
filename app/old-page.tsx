@@ -18,7 +18,7 @@ import { MediaCardDesktop } from "@/components/media-card";
 import MediaSlider from "@/components/media-slider";
 import { PartnerCardDesktop } from "@/components/partner-card.tsx";
 import PartnerSlider from "@/components/partner-slider";
-import Stats from "@/components/stats";
+import Stats from "@/components/c-loan-statistic";
 import ListingCard from "@/components/listing-card";
 
 export default function Home() {

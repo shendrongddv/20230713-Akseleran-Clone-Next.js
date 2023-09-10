@@ -1,6 +1,6 @@
 import Navbar from "@/components/header/navbar";
 import Footer from "@/components/footer/footer";
-import { DownloadApp } from "@/components/cta/download-app";
+import { DownloadAppCTA } from "@/components/cta/cta-download-app";
 
 interface PageLayoutProps {
   children: React.ReactNode;
@@ -19,7 +19,7 @@ export default async function PageLayout({ children }: PageLayoutProps) {
           </div>
         </section>
         {children}
-        <DownloadApp />
+        <DownloadAppCTA />
       </main>
       <Footer />
     </>

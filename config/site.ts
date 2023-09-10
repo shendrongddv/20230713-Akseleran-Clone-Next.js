@@ -21,22 +21,22 @@ export const siteMainNav = [
   {
     id: 1,
     label: "Beri Pinjaman",
-    href: "/",
+    href: "beri-pinjaman",
   },
   {
     id: 2,
     label: "Ajukan Pinjaman",
-    href: "/",
+    href: "ajukan-pinjaman",
   },
   {
     id: 3,
     label: "Tentang Kami",
-    href: "/",
+    href: "tentang-kami",
   },
   {
     id: 4,
     label: "Blog",
-    href: "/",
+    href: "blog",
   },
 ];
 

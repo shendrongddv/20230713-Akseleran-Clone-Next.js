@@ -1,4 +1,4 @@
-import "./globals.css";
+import "@/styles/index.css";
 import type { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 import { fontDisplay, fontBody } from "@/lib/fonts";
@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen bg-background font-body text-[#4a4a4a] antialiased",
+          "min-h-screen bg-background font-body antialiased",
           fontDisplay.variable,
           fontBody.variable
         )}
