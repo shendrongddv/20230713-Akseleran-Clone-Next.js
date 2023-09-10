@@ -24,3 +24,107 @@ export const dummyLenderBenefits = [
     media: "benefit-4.png",
   },
 ];
+
+// NewsMedia
+export const dummyNewsMedia = [
+  {
+    id: 166,
+    media: "logoipsum-2.svg",
+  },
+  {
+    id: 133,
+    media: "logoipsum-3.svg",
+  },
+  {
+    id: 244,
+    media: "logoipsum-3.svg",
+  },
+  {
+    id: 723,
+    media: "logoipsum-1.svg",
+  },
+  {
+    id: 450,
+    media: "logoipsum-1.svg",
+  },
+  {
+    id: 441,
+    media: "logoipsum-1.svg",
+  },
+  {
+    id: 668,
+    media: "logoipsum-1.svg",
+  },
+  {
+    id: 629,
+    media: "logoipsum-2.svg",
+  },
+  {
+    id: 810,
+    media: "logoipsum-5.svg",
+  },
+  {
+    id: 828,
+    media: "logoipsum-1.svg",
+  },
+  {
+    id: 482,
+    media: "logoipsum-6.svg",
+  },
+  {
+    id: 427,
+    media: "logoipsum-1.svg",
+  },
+];
+
+// Partner
+export const dummyPartner = [
+  {
+    id: 259,
+    media: "logoipsum-4.svg",
+  },
+  {
+    id: 844,
+    media: "logoipsum-5.svg",
+  },
+  {
+    id: 950,
+    media: "logoipsum-2.svg",
+  },
+  {
+    id: 340,
+    media: "logoipsum-1.svg",
+  },
+  {
+    id: 481,
+    media: "logoipsum-3.svg",
+  },
+  {
+    id: 545,
+    media: "logoipsum-5.svg",
+  },
+  {
+    id: 551,
+    media: "logoipsum-6.svg",
+  },
+  {
+    id: 580,
+    media: "logoipsum-5.svg",
+  },
+  {
+    id: 952,
+    media: "logoipsum-1.svg",
+  },
+  {
+    id: 804,
+    media: "logoipsum-1.svg",
+  },
+  {
+    id: 238,
+    media: "logoipsum-5.svg",
+  },
+  {
+    id: 77,
+    media: "logoipsum-5.svg",
+  },
+];
