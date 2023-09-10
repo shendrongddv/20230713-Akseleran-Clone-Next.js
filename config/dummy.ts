@@ -1,3 +1,6 @@
+import { CircleDollarSign, Gauge, Puzzle, Rotate3d } from "lucide-react";
+
+// Benefit for Lender
 export const dummyLenderBenefits = [
   {
     id: 1,
@@ -22,6 +25,38 @@ export const dummyLenderBenefits = [
     title: "Nominal Pinjaman Terjangkau",
     desc: "Berikan pinjaman mulai dari Rp100 ribu tanpa biaya tambahan apapun, dari mana saja, kapan saja.",
     media: "benefit-4.png",
+  },
+];
+
+// Benefit for Borrower
+export const dummyBorrowerBenefits = [
+  {
+    id: 1,
+    title: "Pinjaman yang Sesuai Kebutuhanmu",
+    desc: "Berbagai macam produk pinjaman yang dimiliki Akseleran sesuai dengan kebutuhanmu.",
+    media: null,
+    icon: Puzzle,
+  },
+  {
+    id: 2,
+    title: "Proses Lebih Cepat",
+    desc: "Proses pengajuan secara online dan kami akan membantu dari awal hingga akhir proses pengajuan pinjaman.",
+    media: null,
+    icon: Gauge,
+  },
+  {
+    id: 3,
+    title: "Agunan yang Fleksibel",
+    desc: "Tidak perlu memiliki fixed asset sebagai agunan pinjaman, anyak pilihan tipe agunan yang dapat kamu pilih.",
+    media: null,
+    icon: Rotate3d,
+  },
+  {
+    id: 4,
+    title: "Biaya Terjangkau",
+    desc: "Bunga dan biaya administrasi yang kompetitif dan fleksibel.",
+    media: null,
+    icon: CircleDollarSign,
   },
 ];
 

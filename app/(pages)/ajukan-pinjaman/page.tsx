@@ -1,13 +1,17 @@
-const AjukanPinjamanPage = () => {
+import { AutoLendingSection } from "@/components/s-auto-lending";
+import { BorrowerBenefitSection } from "@/components/s-borrower-benefit";
+import { LoanBorrowerSection } from "@/components/s-loan-borrower";
+
+const BeriPinjamanPage = () => {
   return (
-    <section className="px-4 py-16">
-      <div className="container">
-        <div>
-          <h2 className="h2">AjukanPinjamanPage</h2>
-        </div>
-      </div>
-    </section>
+    <>
+      {/* Page Header */}
+      <LoanBorrowerSection />
+
+      {/* Benefit for Borrower */}
+      <BorrowerBenefitSection />
+    </>
   );
 };
 
-export default AjukanPinjamanPage;
+export default BeriPinjamanPage;

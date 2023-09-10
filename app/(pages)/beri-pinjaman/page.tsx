@@ -1,15 +1,19 @@
 import { AutoLendingSection } from "@/components/s-auto-lending";
+import { CampaignCompletedSection } from "@/components/s-campaign-completed";
+import { CampaignOngoingSection } from "@/components/s-campaign-ongoing";
+import { LoanLenderSection } from "@/components/s-loan-lender";
 
 const BeriPinjamanPage = () => {
   return (
     <>
-      <section className="px-4 py-16">
-        <div className="container">
-          <div>
-            <h2 className="h2">BeriPinjamanPage</h2>
-          </div>
-        </div>
-      </section>
+      {/* Page Header */}
+      <LoanLenderSection />
+
+      {/* Campaign Ongoing */}
+      <CampaignOngoingSection />
+
+      {/* Campaign Completed */}
+      <CampaignCompletedSection />
 
       {/* Auto Lending */}
       <AutoLendingSection />

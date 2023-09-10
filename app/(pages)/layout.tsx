@@ -1,6 +1,6 @@
-import Navbar from "@/components/header/navbar";
 import Footer from "@/components/footer/footer";
 import { DownloadAppCTA } from "@/components/cta/cta-download-app";
+import { Header } from "@/components/header/header";
 
 interface PageLayoutProps {
   children: React.ReactNode;
@@ -9,15 +9,8 @@ interface PageLayoutProps {
 export default async function PageLayout({ children }: PageLayoutProps) {
   return (
     <>
-      <Navbar />
+      <Header />
       <main>
-        <section className="bg-slate-100 px-4 py-16">
-          <div className="container">
-            <div>
-              <h2 className="h2">PagesLayout</h2>
-            </div>
-          </div>
-        </section>
         {children}
         <DownloadAppCTA />
       </main>
