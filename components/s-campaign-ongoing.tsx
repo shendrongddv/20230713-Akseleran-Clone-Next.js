@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { buttonVariants } from "./ui/button";
 import { Campaigncard } from "./campaign/campaign-card";
+import { CampaignCardB } from "./campaign/campaign-card-b";
 
 export const CampaignOngoingSection = () => {
   return (
@@ -13,8 +14,7 @@ export const CampaignOngoingSection = () => {
         {/* # */}
         <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-6">
           <Campaigncard />
-          <Campaigncard />
-          <Campaigncard />
+          <CampaignCardB />
         </div>
 
         {/* # */}
