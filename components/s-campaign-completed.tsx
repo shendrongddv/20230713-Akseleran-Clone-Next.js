@@ -1,6 +1,11 @@
-import { cn } from "@/lib/utils";
 import Link from "next/link";
+
+import { cn } from "@/lib/utils";
 import { buttonVariants } from "./ui/button";
+
+import { CampaignCardB } from "./campaign/campaign-card-b";
+
+import { dummyCampaignCompleted } from "@/config/dummy";
 
 export const CampaignCompletedSection = () => {
   return (
@@ -12,6 +17,26 @@ export const CampaignCompletedSection = () => {
         </h2>
 
         {/* # */}
+        <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-6">
+          {dummyCampaignCompleted?.map((item) => (
+            <CampaignCardB
+              key={item.id}
+              campaign_name={item.campaign_name}
+              campaign_time_remaining={item.campaign_time_remaining}
+              cover={item.cover}
+              loan_credit_rating={item.loan_credit_rating}
+              has_insurance={item.has_insurance}
+              funded_percentage={item.funded_percentage}
+              total_investors={item.total_investors}
+              max_funding={item.max_funding}
+              installment_length={item.installment_length}
+              flat_interest={item.flat_interest}
+              have_collateral={item.have_collateral}
+              installment_payment_freq={item.installment_payment_freq}
+              interest_payment_freq={item.interest_payment_freq}
+            />
+          ))}
+        </div>
 
         {/* # */}
         <Link

@@ -1,6 +1,3 @@
-import { Button, buttonVariants } from "@/components/ui/button";
-
-import ListingCard from "@/components/listing-card";
 import ReviewSlider from "@/components/review-slider";
 
 import { LenderBenefitSection } from "@/components/s-lender-benefit";
@@ -11,8 +8,8 @@ import { AutoLendingSection } from "@/components/s-auto-lending";
 import { LoanStatisticSection } from "@/components/s-loan-statistic";
 import { MediaPartnerSection } from "@/components/s-media-partner";
 import { LegalitySection } from "@/components/s-legality";
-import Link from "next/link";
-import { cn } from "@/lib/utils";
+
+import { CampaignOngoingSection } from "@/components/s-campaign-ongoing";
 
 const HomePage = () => {
   const items = [1, 2, 3, 4, 5, 6];
@@ -20,34 +17,8 @@ const HomePage = () => {
   return (
     <>
       {/* Ongoing Campaign */}
-      <section id="ongoing-campaign" className="px-4 pb-16 pt-28">
-        <div className="container flex flex-col gap-8">
-          {/* # */}
-          <h2 className="h2">Kampanye Pinjaman yang Sedang Berlangsung</h2>
-
-          {/* # Listings */}
-          <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
-            {items.map((item) => (
-              <ListingCard key={item} />
-            ))}
-          </div>
-
-          {/* # */}
-          <Link
-            href="/"
-            aria-label="Lihat Lebih Banyak"
-            className={cn(
-              buttonVariants({
-                variant: "accent",
-                size: "default",
-                className: "mt-6 sm:w-max",
-              })
-            )}
-          >
-            Lihat Lebih Banyak
-          </Link>
-        </div>
-      </section>
+      <div className="mt-12"></div>
+      <CampaignOngoingSection />
       {/* ./ Ongoing Campaign */}
 
       {/* Lender Benefit */}

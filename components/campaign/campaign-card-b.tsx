@@ -6,7 +6,13 @@ import Image from "next/image";
 import { Progress } from "../ui/progress";
 
 import Asset from "@/public/thumbnail.jpg";
-import { CalendarCheck, InfoIcon, ShieldCheck, Star } from "lucide-react";
+import {
+  CalendarCheck,
+  Check,
+  InfoIcon,
+  ShieldCheck,
+  Star,
+} from "lucide-react";
 
 const BASE_URL = "https://www.akseleran.co.id/";
 
@@ -57,14 +63,14 @@ export const CampaignCardB = ({
   return (
     <div className="group overflow-hidden rounded-xl border bg-background transition duration-300 hover:shadow-lg">
       {/* # Image & Title */}
-      <div className="relative overflow-hidden">
+      <div className="aspect-h-3 aspect-w-4 relative overflow-hidden">
         <Image
           src={`https://www.akseleran.co.id${cover}`}
           // src={Asset}
           alt={campaign_name}
           width={400}
           height={300}
-          className="z-0 h-auto w-full scale-100 object-cover transition duration-300 group-hover:scale-105"
+          className="z-0 h-full w-full scale-100 object-cover transition duration-300 group-hover:scale-105"
         />
         <div className="absolute inset-0 z-10 flex items-end bg-gradient-to-b from-transparent from-50% to-black to-100% p-4">
           <h3 className="line-clamp-2 text-lg font-bold text-white">
@@ -75,37 +81,56 @@ export const CampaignCardB = ({
 
       {/* # Content */}
       <div className="grid gap-4 p-4 ">
-        {/* ## Badges */}
-        <div className="flex items-center justify-start gap-2">
-          {/* ### Badge */}
-          <div className="flex items-center justify-center gap-1 rounded-full bg-[#A3CA6E] px-2 py-1 text-[10px] font-medium text-white">
-            <CalendarCheck className="h-3 w-3" />
-            {campaign_time_remaining}
-          </div>
-          {/* ### Badge */}
-          <div className="flex items-center justify-center gap-1 rounded-full bg-[#A697C9] px-2 py-1 text-[10px] font-medium text-white">
-            <Star className="h-3 w-3" />
-            {loan_credit_rating}
-          </div>
-          {/* ### Badge */}
-          {has_insurance ? (
-            <div className="flex items-center justify-center gap-1 rounded-full bg-[#C5EDFF] px-2 py-1 text-[10px] font-medium text-primary-foreground">
-              <ShieldCheck className="h-3 w-3" />
-              Proteksi Asuransi
+        {campaign_time_remaining !== "Berakhir" && funded_percentage !== 100 ? (
+          // ## Badges
+          <div className="flex items-center justify-start gap-2">
+            {/* ### Badge */}
+            <div className="flex items-center justify-center gap-1 rounded-full bg-[#A3CA6E] px-2 py-1 text-[10px] font-medium text-white">
+              <CalendarCheck className="h-3 w-3" />
+              {campaign_time_remaining}
             </div>
-          ) : null}
-        </div>
+            {/* ### Badge */}
+            <div className="flex items-center justify-center gap-1 rounded-full bg-[#A697C9] px-2 py-1 text-[10px] font-medium text-white">
+              <Star className="h-3 w-3" />
+              {loan_credit_rating}
+            </div>
+            {/* ### Badge */}
+            {has_insurance ? (
+              <div className="flex items-center justify-center gap-1 rounded-full bg-[#C5EDFF] px-2 py-1 text-[10px] font-medium text-primary-foreground">
+                <ShieldCheck className="h-3 w-3" />
+                Proteksi Asuransi
+              </div>
+            ) : null}
+          </div>
+        ) : null}
 
         {/* ## Milestone */}
         <div className="space-y-2">
-          <p className="text-sm">
-            Telah terkumpul&nbsp;
-            <span className="font-bold">{funded_percentage}%</span>
-            &nbsp;dari&nbsp;
-            <span className="font-bold">{total_investors}</span>
-            &nbsp;lenders
-          </p>
-          <Progress value={progress} className="h-2 w-full" />
+          {campaign_time_remaining !== "Berakhir" &&
+          funded_percentage !== 100 ? (
+            <>
+              <p className="text-sm">
+                Telah terkumpul&nbsp;
+                <span className="font-bold">{funded_percentage}%</span>
+                &nbsp;dari&nbsp;
+                <span className="font-bold">{total_investors}</span>
+                &nbsp;lenders
+              </p>
+              <Progress value={progress} className="h-2 w-full" />
+            </>
+          ) : (
+            <>
+              <p className="text-sm">
+                Telah didanai oleh&nbsp;
+                <span className="font-bold">{total_investors}</span>
+                &nbsp;lenders
+              </p>
+              <div className="flex items-center gap-2 rounded bg-[#A3CA6E] px-2 py-1 text-sm font-semibold text-white">
+                <Check className="h-4 w-4" />
+                Dana 100% telah terkumpul
+              </div>
+            </>
+          )}
         </div>
 
         {/* ## Details */}
