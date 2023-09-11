@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { buttonVariants } from "./ui/button";
+import { Campaigncard } from "./campaign/campaign-card";
 
 export const CampaignOngoingSection = () => {
   return (
@@ -10,6 +11,11 @@ export const CampaignOngoingSection = () => {
         <h2 className="h2">Kampanye Pinjaman yang Sedang Berlangsung</h2>
 
         {/* # */}
+        <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-6">
+          <Campaigncard />
+          <Campaigncard />
+          <Campaigncard />
+        </div>
 
         {/* # */}
         <Link

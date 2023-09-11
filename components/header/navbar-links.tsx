@@ -101,7 +101,7 @@ const SingleItemAlpha = ({ label, href, icon: Icon }: SingleItemProps) => {
             variant: "secondary",
             size: "default",
             className:
-              "flex h-full w-full flex-col items-center justify-center gap-2 bg-secondary-foreground px-2 py-3 text-center text-sm text-white hover:bg-primary-foreground hover:text-white",
+              "flex h-full w-full flex-col items-center justify-center gap-2 bg-primary-foreground px-2 py-3 text-center text-sm text-white hover:bg-secondary-foreground hover:text-white",
           })
         )}
       >

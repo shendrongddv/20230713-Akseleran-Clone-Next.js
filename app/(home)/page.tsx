@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 
 import ListingCard from "@/components/listing-card";
 import ReviewSlider from "@/components/review-slider";
@@ -11,6 +11,8 @@ import { AutoLendingSection } from "@/components/s-auto-lending";
 import { LoanStatisticSection } from "@/components/s-loan-statistic";
 import { MediaPartnerSection } from "@/components/s-media-partner";
 import { LegalitySection } from "@/components/s-legality";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 const HomePage = () => {
   const items = [1, 2, 3, 4, 5, 6];
@@ -18,26 +20,32 @@ const HomePage = () => {
   return (
     <>
       {/* Ongoing Campaign */}
-      <section id="ongoing-campaign" className="px-6 pb-16 pt-32">
-        <div className="container">
-          <div className="flex flex-col gap-12">
-            {/* # */}
-            <h2 className="h2 text-primary">
-              Kampanye Pinjaman yang Sedang Berlangsung
-            </h2>
+      <section id="ongoing-campaign" className="px-4 pb-16 pt-28">
+        <div className="container flex flex-col gap-8">
+          {/* # */}
+          <h2 className="h2">Kampanye Pinjaman yang Sedang Berlangsung</h2>
 
-            {/* # Listings */}
-            <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
-              {items.map((item) => (
-                <ListingCard key={item} />
-              ))}
-            </div>
-
-            {/* # */}
-            <Button variant="outline" className="w-full md:mx-auto md:w-max">
-              Lihat lebih banyak
-            </Button>
+          {/* # Listings */}
+          <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+            {items.map((item) => (
+              <ListingCard key={item} />
+            ))}
           </div>
+
+          {/* # */}
+          <Link
+            href="/"
+            aria-label="Lihat Lebih Banyak"
+            className={cn(
+              buttonVariants({
+                variant: "accent",
+                size: "default",
+                className: "mt-6 sm:w-max",
+              })
+            )}
+          >
+            Lihat Lebih Banyak
+          </Link>
         </div>
       </section>
       {/* ./ Ongoing Campaign */}

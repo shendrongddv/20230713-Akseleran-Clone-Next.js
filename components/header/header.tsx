@@ -11,7 +11,7 @@ export const Header = () => {
   return (
     <header className="fixed left-0 top-0 z-50 w-full border-b bg-white px-4">
       <div className="container">
-        <div className="flex h-14 items-center justify-between md:h-16">
+        <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <div className="flex items-center justify-center gap-4">
             <SiteLogoNavbar />
