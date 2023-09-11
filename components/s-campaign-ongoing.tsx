@@ -1,8 +1,9 @@
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { buttonVariants } from "./ui/button";
-import { Campaigncard } from "./campaign/campaign-card";
 import { CampaignCardB } from "./campaign/campaign-card-b";
+
+import { dummyCampaignOngoing } from "@/config/dummy";
 
 export const CampaignOngoingSection = () => {
   return (
@@ -12,9 +13,22 @@ export const CampaignOngoingSection = () => {
         <h2 className="h2">Kampanye Pinjaman yang Sedang Berlangsung</h2>
 
         {/* # */}
-        <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-6">
-          <Campaigncard />
-          <CampaignCardB />
+        <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-6">
+          {dummyCampaignOngoing?.map((item) => (
+            <CampaignCardB
+              key={item.id}
+              campaign_name={item.campaign_name}
+              campaign_time_remaining={item.campaign_time_remaining}
+              loan_credit_rating={item.loan_credit_rating}
+              has_insurance={item.has_insurance}
+              funded_percentage={item.funded_percentage}
+              total_investors={item.total_investors}
+              max_funding={item.max_funding}
+              installment_length={item.installment_length}
+              flat_interest={item.flat_interest}
+              have_collateral={item.have_collateral}
+            />
+          ))}
         </div>
 
         {/* # */}

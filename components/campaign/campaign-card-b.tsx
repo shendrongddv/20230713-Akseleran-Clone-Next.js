@@ -8,13 +8,37 @@ import { Progress } from "../ui/progress";
 import Asset from "@/public/thumbnail.jpg";
 import { CalendarCheck, InfoIcon, ShieldCheck, Star } from "lucide-react";
 
-export const CampaignCardB = () => {
+type CampaignCardProps = {
+  campaign_name: string;
+  campaign_time_remaining: string;
+  loan_credit_rating: string;
+  has_insurance: boolean;
+  funded_percentage: number;
+  total_investors: number;
+  max_funding: number;
+  installment_length: string;
+  flat_interest: number;
+  have_collateral: boolean;
+};
+
+export const CampaignCardB = ({
+  campaign_name,
+  campaign_time_remaining,
+  loan_credit_rating,
+  has_insurance,
+  funded_percentage,
+  total_investors,
+  max_funding,
+  installment_length,
+  flat_interest,
+  have_collateral,
+}: CampaignCardProps) => {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const timer = setTimeout(() => setProgress(66), 500);
+    const timer = setTimeout(() => setProgress(funded_percentage), 500);
     return () => clearTimeout(timer);
-  }, []);
+  }, [funded_percentage]);
 
   return (
     <div className="group overflow-hidden rounded-xl border bg-background transition duration-300 hover:shadow-lg">
@@ -29,8 +53,7 @@ export const CampaignCardB = () => {
         />
         <div className="absolute inset-0 z-10 flex items-end bg-gradient-to-b from-transparent from-50% to-black to-100% p-4">
           <h3 className="line-clamp-2 text-lg font-bold text-white">
-            Pinjaman 17961/DF/329072-2/VIII/2023 Lorem ipsum dolor sit amet
-            consectetur adipisicing elit.
+            {campaign_name}
           </h3>
         </div>
       </div>
@@ -42,27 +65,29 @@ export const CampaignCardB = () => {
           {/* ### Badge */}
           <div className="flex items-center justify-center gap-1 rounded-full bg-[#A3CA6E] px-2 py-1 text-[10px] font-medium text-white">
             <CalendarCheck className="h-3 w-3" />
-            27 Hari lagi
+            {campaign_time_remaining}
           </div>
           {/* ### Badge */}
           <div className="flex items-center justify-center gap-1 rounded-full bg-[#A697C9] px-2 py-1 text-[10px] font-medium text-white">
             <Star className="h-3 w-3" />
-            A+
+            {loan_credit_rating}
           </div>
           {/* ### Badge */}
-          <div className="flex items-center justify-center gap-1 rounded-full bg-[#C5EDFF] px-2 py-1 text-[10px] font-medium text-primary-foreground">
-            <ShieldCheck className="h-3 w-3" />
-            Proteksi Asuransi
-          </div>
+          {has_insurance ? (
+            <div className="flex items-center justify-center gap-1 rounded-full bg-[#C5EDFF] px-2 py-1 text-[10px] font-medium text-primary-foreground">
+              <ShieldCheck className="h-3 w-3" />
+              Proteksi Asuransi
+            </div>
+          ) : null}
         </div>
 
         {/* ## Milestone */}
         <div className="space-y-2">
           <p>
             Telah terkumpul&nbsp;
-            <span className="font-bold">48.6%</span>
+            <span className="font-bold">{funded_percentage}%</span>
             &nbsp;dari&nbsp;
-            <span className="font-bold">63</span>
+            <span className="font-bold">{total_investors}</span>
             &nbsp;lenders
           </p>
           <Progress value={progress} className="h-2 w-full" />
@@ -73,13 +98,13 @@ export const CampaignCardB = () => {
           {/* ### Col */}
           <div className="flex flex-col">
             <small className="text-xs">Jumlah Pinjaman</small>
-            <span className="font-bold">Rp 170.000.000</span>
+            <span className="font-bold">Rp&nbsp;{max_funding}</span>
           </div>
 
           {/* ### Col */}
           <div className="flex flex-col">
             <small className="text-xs">Tenor</small>
-            <span className="font-bold">3 Bulan</span>
+            <span className="font-bold">{installment_length}&nbsp;Bulan</span>
           </div>
 
           {/* ### Col */}
@@ -88,13 +113,17 @@ export const CampaignCardB = () => {
               Bunga efektif
               <InfoIcon className="h-3 w-3" />
             </small>
-            <span className="font-bold">10.00 %</span>
+            <span className="font-bold">
+              {Math.floor(flat_interest * 100) / 100}&nbsp;%
+            </span>
           </div>
 
           {/* ### Col */}
           <div className="flex flex-col">
             <small className="text-xs">Agunan</small>
-            <span className="font-bold">Tidak ada</span>
+            <span className="font-bold">
+              {have_collateral ? "Ada" : "Tidak ada"}
+            </span>
           </div>
 
           {/* ### Col */}
