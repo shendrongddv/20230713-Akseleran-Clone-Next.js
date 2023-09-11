@@ -19,6 +19,7 @@ export const CampaignOngoingSection = () => {
               key={item.id}
               campaign_name={item.campaign_name}
               campaign_time_remaining={item.campaign_time_remaining}
+              cover={item.cover}
               loan_credit_rating={item.loan_credit_rating}
               has_insurance={item.has_insurance}
               funded_percentage={item.funded_percentage}
@@ -27,6 +28,8 @@ export const CampaignOngoingSection = () => {
               installment_length={item.installment_length}
               flat_interest={item.flat_interest}
               have_collateral={item.have_collateral}
+              installment_payment_freq={item.installment_payment_freq}
+              interest_payment_freq={item.interest_payment_freq}
             />
           ))}
         </div>

@@ -8,9 +8,12 @@ import { Progress } from "../ui/progress";
 import Asset from "@/public/thumbnail.jpg";
 import { CalendarCheck, InfoIcon, ShieldCheck, Star } from "lucide-react";
 
+const BASE_URL = "https://www.akseleran.co.id/";
+
 type CampaignCardProps = {
   campaign_name: string;
   campaign_time_remaining: string;
+  cover: string;
   loan_credit_rating: string;
   has_insurance: boolean;
   funded_percentage: number;
@@ -19,11 +22,14 @@ type CampaignCardProps = {
   installment_length: string;
   flat_interest: number;
   have_collateral: boolean;
+  installment_payment_freq: string;
+  interest_payment_freq: string;
 };
 
 export const CampaignCardB = ({
   campaign_name,
   campaign_time_remaining,
+  cover,
   loan_credit_rating,
   has_insurance,
   funded_percentage,
@@ -32,6 +38,8 @@ export const CampaignCardB = ({
   installment_length,
   flat_interest,
   have_collateral,
+  installment_payment_freq,
+  interest_payment_freq,
 }: CampaignCardProps) => {
   const [progress, setProgress] = useState(0);
 
@@ -40,13 +48,20 @@ export const CampaignCardB = ({
     return () => clearTimeout(timer);
   }, [funded_percentage]);
 
+  const f = new Intl.NumberFormat("id-ID", {
+    currency: "IDR",
+    style: "currency",
+    minimumFractionDigits: 0,
+  });
+
   return (
     <div className="group overflow-hidden rounded-xl border bg-background transition duration-300 hover:shadow-lg">
       {/* # Image & Title */}
       <div className="relative overflow-hidden">
         <Image
-          src={Asset}
-          alt="Image"
+          src={`https://www.akseleran.co.id${cover}`}
+          // src={Asset}
+          alt={campaign_name}
           width={400}
           height={300}
           className="z-0 h-auto w-full scale-100 object-cover transition duration-300 group-hover:scale-105"
@@ -83,7 +98,7 @@ export const CampaignCardB = ({
 
         {/* ## Milestone */}
         <div className="space-y-2">
-          <p>
+          <p className="text-sm">
             Telah terkumpul&nbsp;
             <span className="font-bold">{funded_percentage}%</span>
             &nbsp;dari&nbsp;
@@ -98,7 +113,7 @@ export const CampaignCardB = ({
           {/* ### Col */}
           <div className="flex flex-col">
             <small className="text-xs">Jumlah Pinjaman</small>
-            <span className="font-bold">Rp&nbsp;{max_funding}</span>
+            <span className="font-bold">{f.format(max_funding)}</span>
           </div>
 
           {/* ### Col */}
@@ -129,13 +144,17 @@ export const CampaignCardB = ({
           {/* ### Col */}
           <div className="flex flex-col">
             <small className="text-xs">Frek. angsuran pokok</small>
-            <span className="font-bold">Diakhir tenor</span>
+            <span className="font-bold">
+              {installment_payment_freq === "Bulanan"
+                ? "Bulanan"
+                : "Diakhir Tenor"}
+            </span>
           </div>
 
           {/* ### Col */}
           <div className="flex flex-col">
             <small className="text-xs">Frek. angsuran bunga</small>
-            <span className="font-bold">Bulanan</span>
+            <span className="font-bold">{interest_payment_freq}</span>
           </div>
         </div>
       </div>
